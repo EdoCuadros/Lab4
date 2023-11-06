@@ -67,7 +67,7 @@ rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 2, positi
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 3, position: 1380}"
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 4, position: 1700}"
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 5, position: 2483}"
-rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 1, position: 0}"
+
 ```
 
 

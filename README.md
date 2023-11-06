@@ -20,3 +20,10 @@ Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter
 ### Posición 2
 ![image](https://github.com/EdoCuadros/Lab4/assets/69473568/baaa5767-c5c7-4de9-9516-a683a8006dbd)
 
+## Conexión ROS con Dynamixel
+
+
+
+## Script de MATLAB
+
+Se importan librerías y se inicia la conexión con ROS.

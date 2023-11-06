@@ -1,4 +1,28 @@
-# Lab4
+# Laboratorio 4 de Robótica. Cinemática Directa - Phantom X - ROS
+Integrantes:
+
+***Eduardo Cuadros Montealegre***
+
+***Oscar Javier Restrepo***
+
+
+## Introducción
+
+## Objetivos
+- Crear todos los Joint Controllers con ROS para manipular servomotores Dynamixel AX-12 del robot Phantom
+X Pincher.
+- Manipular los tópicos de estado y comando para todos los Joint Controllers del robot Phantom X Pincher.
+- Manipular los servicios para todos los Joint Controllers del robot Phantom X Pincher.
+- Conectar el robot Phantom X Pincher con MATLAB o Python usando ROS.
+
+### Ejercicio en el laboratorio
+- Cada grupo tendrá a cargo un robot Phantom X Pincher. Siga las indicaciones del laboratorista y profesores
+para hacer buen uso de los robots del laboratorio.
+Mediciones:
+- Establezca las longitudes de eslabón para cada articulación del robot Phantom X Pincher, para este proceso
+apóyese en un CALIBRADOR. Recuerde que la longitud de eslabón es la mı́nima distancia que conecta dos
+juntas consecutivas. Genere un diagrama como el presentado en la figura 2 con los datos medidos.
+- Es posible que su grupo deba trabajar con una versión nueva del Phantom X Pincher, la cual varı́a ligeralemente su geometrı́a. Asegúrese de representar adecuadamente este cambio en el diagrama de longitudes del robot.
 
 Comenzando con la práctica se miden las lóngitudes del _Phantom X Pincher_ y posteriormente se realiza la cinemática directa con la tabla Denavit-Hatenberg.
 

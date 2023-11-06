@@ -53,7 +53,7 @@ manipulador (waist, shoulder, elbow, wrist). La lógica del script puede ser la 
 la base, agregue una pequeña espera entre cada movimiento para facilitar la grabacion de videos de
 demostración.
 
-'''
+```
 #Posición 1
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 1, position: 0}"
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 2, position: 3000}"
@@ -68,7 +68,7 @@ rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 3, positi
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 4, position: 1700}"
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 5, position: 2483}"
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 1, position: 0}"
-'''
+```
 
 
 ## Script de MATLAB

@@ -49,7 +49,7 @@ rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 4, positi
 rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 5, position: 2483}"
 
 ```
-[![Mirar el video](https://github.com/EdoCuadros/Lab1/blob/main/RobotYoutube.png)](https://youtu.be/--UTZC1VN2I)
+[![Mirar el video](images/ros1.png)](https://youtu.be/--UTZC1VN2I)
 ### Toolbox:
 Utilice el comando SerialLink para crear el robot con los parámetros de su tabla DH.
 Obtenga la matriz de transformación homogénea desde la base hasta el efector final, la idea es realizar el

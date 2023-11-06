@@ -18,11 +18,14 @@ X Pincher.
 ### Ejercicio en el laboratorio
 - Cada grupo tendrá a cargo un robot Phantom X Pincher. Siga las indicaciones del laboratorista y profesores
 para hacer buen uso de los robots del laboratorio.
-Mediciones:
+
+### Mediciones:
 - Establezca las longitudes de eslabón para cada articulación del robot Phantom X Pincher, para este proceso
 apóyese en un CALIBRADOR. Recuerde que la longitud de eslabón es la mı́nima distancia que conecta dos
 juntas consecutivas. Genere un diagrama como el presentado en la figura 2 con los datos medidos.
 - Es posible que su grupo deba trabajar con una versión nueva del Phantom X Pincher, la cual varı́a ligeralemente su geometrı́a. Asegúrese de representar adecuadamente este cambio en el diagrama de longitudes del robot.
+
+![image](https://github.com/EdoCuadros/Lab4/blob/main/images/DH1.png)
 
 ## Conexión ROS con Dynamixel
 Con base en la documentación de los motores Dynamixel en ROS, cree un script que publique a los tópicos

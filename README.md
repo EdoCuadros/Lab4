@@ -45,7 +45,30 @@ Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter
 ![image](https://github.com/EdoCuadros/Lab4/assets/69473568/baaa5767-c5c7-4de9-9516-a683a8006dbd)
 
 ## Conexión ROS con Dynamixel
+Con base en la documentación de los motores Dynamixel en ROS, cree un script que publique a los tópicos
+y llame a los servicios correspondientes para realizar el movimiento de cada una de las articulaciones del
+manipulador (waist, shoulder, elbow, wrist). La lógica del script puede ser la siguiente:
+- Se debe realizar el movimiento entre dos posiciones angulares caracterı́sticas: una de home y otra objetivo.
+- El movimiento de las articulaciones debe realizarse de forma secuencial iniciando por la articulacion de
+la base, agregue una pequeña espera entre cada movimiento para facilitar la grabacion de videos de
+demostración.
 
+'''
+#Posición 1
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 1, position: 0}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 2, position: 3000}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 3, position: 1233}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 4, position: 2086}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 5, position: 1707}"
+
+#Posición 2
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 1, position: 200}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 2, position: 2800}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 3, position: 1380}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 4, position: 1700}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 5, position: 2483}"
+rostopic pub -1 /set_position dynamixel_sdk_examples/SetPosition "{id: 1, position: 0}"
+'''
 
 
 ## Script de MATLAB

@@ -90,4 +90,43 @@ Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter
 
 ## Script de MATLAB
 
-Se importan librerías y se inicia la conexión con ROS.
+Primero se importan las librerías para la conexión con ROS.
+
+```
+import rospy
+from std_msgs.msg import String
+from sensor_msgs.msg import JointState
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+```
+Luego se define la función para mandar las coordenadas al robot. Inicialmente se instancia el objeto para publicar y se inicia el nodo en la red.
+
+```
+def joint_publisher():
+    pub = rospy.Publisher('/joint_trajectory', JointTrajectory, queue_size=0)
+    rospy.init_node('joint_publisher', anonymous=False)
+ ```
+Posteriormente en un bucle se mandan las trayectorias. El bucle tiene como condición de parada la desconexión del nodo. 
+ ```
+while not rospy.is_shutdown():
+        state = JointTrajectory()
+        state.header.stamp = rospy.Time.now()
+        state.joint_names = ["joint_1","joint_2","joint_3","joint_4","joint_5",]
+        point = JointTrajectoryPoint()
+        point.positions = [0, 0, 0, 0, 0]    
+        point.time_from_start = rospy.Duration(0.5)
+        state.points.append(point)
+        pub.publish(state)
+        print('published command')
+        rospy.sleep(1)
+ ```
+En la linea de _positions_ se escogen las ubicaciones de cada articulación. Exceptuando la linea del _while_, el bloque de código se repite para cada posición del robot, es decir, se tendrán 5 bloques iguales con diferentes ángulos en cada articulación.
+
+Finalmente se cierra el bucle y se inicia el método main, donde se hace el llamado al método creado anteriormente. Dentro de dicho método, se utiliza el bloque _try / except_ para encapsular algún error relacionado con la conexión con ROS.
+
+ ```
+if __name__ == '__main__':
+    try:
+        joint_publisher()
+    except rospy.ROSInterruptException:
+        pass
+ ```

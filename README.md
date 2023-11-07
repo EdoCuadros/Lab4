@@ -73,6 +73,17 @@ Comenzando con la práctica se miden las lóngitudes del _Phantom X Pincher_ y p
 
 Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter Corke en MATLAB para las distintas posiciones requeridas.
 
+### Matlab o Python + ROS + Toolbox:
+- Cree un código en Matlab que env´ıe la posición en ángulos deseada a cada articulación del robot utilizando las herramientas de ROS + Dynamixel, el programa deberá graficar la configuración del robot usando las herramientas del toolbox, esta configuración deberá coincidir con la obtenida en el robot real.
+- Pruebe las siguientes poses generadas a partir de los valores articulares de q1, q2, q3, q4, q5 (Recuerde que los valores de configuración se toman respecto a home, para el cual todos los valores articulares son cero):
+1. 0, 0, 0, 0, 0.
+2. 25, 25, 20, -20, 0.
+3. -35,35, -30, 30, 0.
+4. 85, -20, 55, 25, 0.
+5. 80, -35, 55, -45, 0.
+Cuide que las poses no interfieran con los limites articulares o algún objeto en el espacio de trabajo. Puede
+ajustar el valor de los ´angulos de las poses para esquivar algún obstáculo
+
 ### Posición 1 : [0,0,0,0,0]
 ![Pos1](https://github.com/EdoCuadros/Lab4/assets/69473568/af1eb7d9-7ec5-4e08-8a30-e20c4c12faee)
 
@@ -129,4 +140,42 @@ if __name__ == '__main__':
         joint_publisher()
     except rospy.ROSInterruptException:
         pass
+ ```
+### Video del movimiento del robot en las 5 posiciones
+[![Mirar el video](https://github.com/EdoCuadros/Lab4/blob/main/images/ros2.png)](https://youtu.be/rAujGf27mbs)
+
+Cree una interfaz de usuario, o HMI, donde se muestre al usuario lo siguiente:
+1. Nombres, logos y datos de los integrantes del grupo.
+2. Imagen perspectiva de la posici´on actual del manipulador con la ultima posición enviada.
+3. Opción para seleccionar 1 de las 5 poses y enviarlas al manipulador.
+4. Valores de los valores articulares reales de cada motor.
+5. Imagen perspectiva de la posición actual del manipulador con los valores articulares.
+ ```
+print("Integrante 1: Oscar Javier Restrepo")
+print("Integrante 2: Eduardo Cuadros Montealegre")
+A=input("Digite la posición deseada 1, 2, 3, 4 o 5: ")
+posicion_1=[0,0,0,0,0]
+posicion_2=[25,25,20,-20,0]
+posicion_3=[-35,35,-30,30,0]
+posicion_4=[85,-20,55,25,0]
+posicion_5=[80,-35,55,-45,0]
+match A:
+    case 1: posicionar(posicion_1)
+    case 2: posicionar(posicion_2)
+    case 3: posicionar(posicion_3)
+    case 4: posicionar(posicion_4)
+    case 5: posicionar(posicion_5)
+
+
+def posicionar(pos):
+    state = JointTrajectory()
+    state.header.stamp = rospy.Time.now()
+    state.joint_names = ["joint_1","joint_2","joint_3","joint_4","joint_5",]
+    point = JointTrajectoryPoint()
+    point.positions = pos    
+    point.time_from_start = rospy.Duration(0.5)
+    state.points.append(point)
+    pub.publish(state)
+    print('published command')
+    rospy.sleep(1)
  ```

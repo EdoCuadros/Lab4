@@ -88,7 +88,7 @@ Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter
 ### Posición 5 : [80,-35,55,-45,0]
 ![Pos5](https://github.com/EdoCuadros/Lab4/assets/69473568/79b82139-c8c4-43bc-8d63-7a876d5ba62f)
 
-## Script de MATLAB
+## Script de Python
 
 Primero se importan las librerías para la conexión con ROS.
 

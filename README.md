@@ -71,19 +71,22 @@ Comenzando con la práctica se miden las lóngitudes del _Phantom X Pincher_ y p
 | 3  | q3     | 0    | 99.2 | 0 
 | 4  | q4     | 0    | 83.2 | 0 |
 
-Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter Corke en MATLAB.
+Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter Corke en MATLAB para las distintas posiciones requeridas.
 
-### Posición HOME
-![image](https://github.com/EdoCuadros/Lab4/assets/69473568/5912647e-29b2-45ff-b568-0651ec10a180)
+### Posición 1 : [0,0,0,0,0]
+![Pos1](https://github.com/EdoCuadros/Lab4/assets/69473568/af1eb7d9-7ec5-4e08-8a30-e20c4c12faee)
 
-### Posición 1
-![image](https://github.com/EdoCuadros/Lab4/assets/69473568/8e9323a1-a5aa-4202-ad9d-c95a8d7696b9)
+### Posición 2 : [25,25,20,-20,0]
+![Pos2](https://github.com/EdoCuadros/Lab4/assets/69473568/827ea91f-dc1e-46da-b074-aa0c2a0c5f55)
 
-### Posición 2
-![image](https://github.com/EdoCuadros/Lab4/assets/69473568/baaa5767-c5c7-4de9-9516-a683a8006dbd)
+### Posición 3 : [-35,35,-30,30,0]
+![Pos3](https://github.com/EdoCuadros/Lab4/assets/69473568/b532adfb-e141-4b63-b66a-bd9abf3b0680)
 
+### Posición 4 : [85,-20,55,25,0]
+![Pos4](https://github.com/EdoCuadros/Lab4/assets/69473568/e099b85a-544e-4704-ac2e-6695442da6a0)
 
-
+### Posición 5 : [80,-35,55,-45,0]
+![Pos5](https://github.com/EdoCuadros/Lab4/assets/69473568/79b82139-c8c4-43bc-8d63-7a876d5ba62f)
 
 ## Script de MATLAB
 

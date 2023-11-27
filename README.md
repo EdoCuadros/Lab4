@@ -67,9 +67,9 @@ Comenzando con la práctica se miden las lóngitudes del _Phantom X Pincher_ y p
 | Joint | Theta | d | a | alpha |
 | -------- | -------- | -------- | -------- | -------- |
 | 1  | q1     | 0    | 0 | pi/2 |
-| 2  | q2     | 0    | 106.3 | 0 |
-| 3  | q3     | 0    | 99.2 | 0 
-| 4  | q4     | 0    | 83.2 | 0 |
+| 2  | q2     | 0    | 100 | 0 |
+| 3  | q3     | 0    | 100 | 0 |
+| 4  | q4     | 0    | 100 | 0 |
 
 Se corroboran los parámetros graficando el robot con ayuda del Toolbox de Peter Corke en MATLAB para las distintas posiciones requeridas.
 
